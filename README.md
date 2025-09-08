@@ -169,3 +169,39 @@
 </body>
 </html>
 assignment
+:root {
+  --max-width: 1100px;
+  --container-pad: 1rem;
+  --brand: #4285F9;    /* CarePay Dodger Blue */
+  --muted: #4a4a4a;    /* Dark gray for text */
+  --radius: 12px;
+  --surface: #ffffff;
+  --shadow: 0 6px 18px rgba(15,23,42,0.08);
+}
+
+/* ... (other base styles unchanged) ... */
+
+/* ---- Responsive breakpoints (Enhanced) ---- */
+/* Mobile-first */
+@media (min-width: 768px) {
+  /* Tablet styles (unchanged) */
+}
+
+@media (min-width: 1024px) {
+  /* Desktop styles (unchanged) */
+}
+
+/* Large desktop breakpoint */
+@media (min-width: 1440px) {
+  :root { --max-width: 1400px; }
+  .hero-copy h1 { font-size: 3rem; }
+  .features-grid { grid-template-columns: repeat(5, 1fr); }
+}
+
+/* Mobile landscape small devices */
+@media (max-width: 600px) and (orientation: landscape) {
+  .hero-inner { flex-direction: row; }
+  .hero-copy h1 { font-size: 1.75rem; }
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
